@@ -2,7 +2,7 @@
 title:       Coding Struggles
 email:       branch13@gmail.com
 author:      Dario Oddenino
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+description: "Struggling to be a better coder :)"
 baseurl:     ""
 url:         "http://codingstruggles.com"
 date_format: "%b %-d, %Y"
@@ -17,7 +17,7 @@ google_tag_manager:
 bing_verification:
 
 # Optional features
-animated:             false
+animated:             true
 show_related_posts:   false
 show_post_footers:    false
 show_social_icons:    false
@@ -28,7 +28,7 @@ enable_anchorjs: false
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname:
+disqus_shortname: "dariooddenino"
 
 # Facebook Comments plugin
 # (leave blank to disable Facebook Comments, otherwise set it to true)
@@ -37,10 +37,10 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username: "dariooddenino"
 bitbucket_username:
 stackoverflow_id:
-twitter_username:
+twitter_username: "dariooddenino"
 skype_username:
 steam_nickname:
 google_plus_id:
@@ -52,15 +52,15 @@ paypal_url:
 flattr_button:
 
 # Post sharing icons
-show_sharing_icons: false
+show_sharing_icons: true
 # Change to 'true' to enable individual icons
-share_facebook: false
-share_twitter: false
+share_facebook: true
+share_twitter: true
 share_googleplus: false
 share_linkedin: false
-share_digg: false
+share_digg: true
 share_tumblr: false
-share_reddit: false
+share_reddit: true
 share_stumbleupon: false
 share_hackernews: false
 
