@@ -1,17 +1,17 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
+title:       Coding Struggles
+email:       branch13@gmail.com
+author:      Dario Oddenino
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "http://codingstruggles.com"
 date_format: "%b %-d, %Y"
 
 # Google services
-google_verification:
+google_verification: "4p9Idbj55gSFz5mSVYSiL0b1hjWGqKG8p1f1Uc2lVAA"
 # Use either direct GA implementation or set up GTM account
 # - using both will skew your data (leave blank to not use at all)
-google_analytics:
+google_analytics: "UA-69458120-1"
 google_tag_manager:
 # Bing services
 bing_verification:
