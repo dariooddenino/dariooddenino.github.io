@@ -26,7 +26,7 @@ The usage is pretty simple: just call `(examples function)` in your REPL, and yo
 
 E.g. `(examples map)`
 
-```clojure
+```
 -----------------------------------------------
 clojure.core/map
 -----------------------------------------------
