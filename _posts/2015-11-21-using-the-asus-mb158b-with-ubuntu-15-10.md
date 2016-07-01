@@ -21,6 +21,8 @@ Then type `nano displaylink-installer.sh` to edit the installer file (if you don
 Change this:
 
 ```bash
+#!/bin/bash
+
 detect_distro()
 {
   if which lsb_release >/dev/null; then
@@ -32,14 +34,16 @@ detect_distro()
         SYSTEMINITDAEMON=systemd
         fi
   else
-    echo \"WARNING: Unknown distribution, assuming defaults - this may fail.\" >&2
-    fi
-  }
+      echo \"WARNING: Unknown distribution, assuming defaults - this may fail.\" >&2
+  fi
+}
 ```
                                           
  To this:
                                       
 ```bash
+#!/bin/bash
+
 detect_distro()
 {
   if which lsb_release >/dev/null; then
