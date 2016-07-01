@@ -2,7 +2,7 @@
 layout:     post
 title:      Arbitrary length lists with QuickCheck
 date:       2016-07-01 09:32:11
-summary:    Using **sized** to build arbitrary length lists for QuickCheck
+summary:    Using sized to build arbitrary length lists for QuickCheck
 categories: haskell
 ---
 
@@ -46,3 +46,9 @@ arbitraryList m
    
 I capped the length at 6 to avoid super long lists.    
  
+The `Arbitrary` instance is then:
+ 
+```haskell
+instance Arbitrary a => Arbitrary (List a) where
+    arbitrary = sized arbitraryList
+```
