@@ -26,13 +26,13 @@ The usage is pretty simple: just call `(examples function)` in your REPL, and yo
 
 E.g. `(examples map)`
 
-```
+```clojure
 -----------------------------------------------
 clojure.core/map
 -----------------------------------------------
 (map inc [1 2 3 4 5])
 ;;=> (2 3 4 5 6)
-;;
+```
 ;; map can be used with multiple collections. Collections will be consumed
 ;; and passed to the mapping function in parallel:
 (map + [1 2 3] [4 5 6])
