@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Arbitrary length lists with QuickCheck
-date:       2017-07-01 16:32:11
+date:       2016-07-01 16:32:11
 summary:    Using **sized** to build arbitrary length lists for QuickCheck
 categories: haskell
 ---
