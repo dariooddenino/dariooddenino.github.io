@@ -2,15 +2,18 @@
 layout:     post
 title:      Using the Asus MB168B+ with Ubuntu 15.10
 date:       2015-11-21 23:32:11
-summary:    How to make the ASus MB168B+ work with Ubuntu
+summary:    How to edit the driver install script to make it work on Ubuntu 15.10+ (and other distros)
 ---
 
 The **Asus MB168B+** is a very nice portable monitor, and it would be a shame if it weren't possible to use it with Ubuntu ;)
 
-Download the Ubuntu [driver](http://www.displaylink.com/downloads/ubuntu.php) and extract it somewhere.\n\nOpen up a terminal, and navigate to that folder. Then launch these commands:
+Download the Ubuntu [driver](http://www.displaylink.com/downloads/ubuntu.php) and extract it somewhere.
+
+Open up a terminal, and navigate to that folder. Then launch these commands:
 
 ```bash
-./displaylink-driver-1.0.138.run --keep --noexec\ncd displaylink-driver-1.0.138/
+./displaylink-driver-1.0.138.run --keep --noexec
+cd displaylink-driver-1.0.138/
 ```
 
 Then type `nano displaylink-installer.sh` to edit the installer file (if you don't like nano, use your favourite text editor!).
