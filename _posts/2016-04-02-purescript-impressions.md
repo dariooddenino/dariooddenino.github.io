@@ -11,7 +11,7 @@ A couple of days ago I was checking [Elm](http://elm-lang.org). It's a very inte
 While Elm has a syntax that is inspired by Haskell, PureScript's one is almost identical, to the point that Haskell's didactic resources can be used to some extent.
 Since I always wanted to learn Haskell, I think PureScript might be a better match for me than Elm.
 
-###What's PureScript?
+## What's PureScript?
 
 The official website keeps it very succint, by writing:
 
@@ -21,13 +21,13 @@ Not much! They probably assume that everyone checking the website is coming from
 
 The language is still very young, so it's still hard to find examples and learning material. Things are also changing quickly, but I think this is both a problem and something exciting!
 
-###So, what does it look like?
+## So, what does it look like?
 
 Having no experience in Haskell whatsoever, there are things that look weird even in the most simple examples.
 
 This code is taken from the tutorial (try it!):
 
-```purescript
+```haskell
 module Euler1 where
 
 import Prelude
@@ -48,13 +48,13 @@ There's also a relative lack of parentheses. Functions arguments are listed afte
 
 From what I've seen, functions can be used both in prefix and infix position. For example, map is usually used like this:
 
-```purescript
+```haskell
 map (\n -> n + 1) [1, 2, 3, 4]  
 ```
 
 But it can also be used as an infix operator by surrounding it with backticks:
 
-```purescript
+```haskell
 (+) :: forall a. (Semiring a) => a -> a -> a
 ```
 
@@ -62,10 +62,10 @@ The Semiring part is a class constraint and I'm still not entirely sure of how t
 
 In fact, all functions in PureScript take one argument only.
 
-###The Ecosystem
+## The Ecosystem
 
 The language is young (there's a bug in version 0.8.3 that make builds fail!), and so are the tools and libraries. I haven't spent a lot of time searching, but it seems that PureScript already has its fair share of React frameworks (and some alternatives too).
 
-###The End
+## The End
 
 If I havent' scared or bored you to death, the next step after the tutorial is to follow [PureScript by Example](https://leanpub.com/purescript/read). Good luck!
