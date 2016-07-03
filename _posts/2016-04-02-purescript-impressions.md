@@ -55,6 +55,13 @@ map (\n -> n + 1) [1, 2, 3, 4]
 But it can also be used as an infix operator by surrounding it with backticks:
 
 ```haskell
+(\n -> n + 1) `map` [1, 2, 3, 4]
+```
+
+A similar transformation can be applied to infix operators too: 1 + 1 can become (+) 1 1. But this is no lisp, so don't try to do something like (+) 1 1 1 1 1 1, as it won't work ;)
+The reason becomes clear by looking at the type signature of the function:
+
+```haskell
 (+) :: forall a. (Semiring a) => a -> a -> a
 ```
 
