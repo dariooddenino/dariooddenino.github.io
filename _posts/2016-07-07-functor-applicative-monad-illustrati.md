@@ -153,9 +153,9 @@ Se `findPost` trova un post, otterremo il titolo con `getPostTitle`. Se ritorna
 `<$>` &grave; la versione *infix* di `fmap`, per cui spesso vedrai la versione
  equivalente:
  
- ```haskell
- getPostTitle <$> (findPost 1)
- ```
+```haskell
+getPostTitle <$> (findPost 1)
+```
  
  Ecco un altro esempio: cosa succede quando applichi una funzione a una lista?
  
@@ -169,8 +169,8 @@ Se `findPost` trova un post, otterremo il titolo con `getPostTitle`. Se ritorna
  
  Anche le liste sono Functor! Ecco la definizione:
  
- ```haskell
- instance Functor [] where
+```haskell
+instance Functor [] where
     fmap = map
 ```
 
@@ -200,7 +200,7 @@ Il risultato &egrave; un'altra funzione!
 
 Quindi anche le funzioni sono Functor!
 
-```
+```haskell
 instance Functor ((->) r) where
     fmap f g = f . g
 ```
