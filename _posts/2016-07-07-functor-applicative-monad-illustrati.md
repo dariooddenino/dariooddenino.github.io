@@ -2,7 +2,7 @@
 layout:     post
 title:      Functor, Applicative e Monad illustrati
 date:       2016-07-07 09:32:11
-summary:    
+summary:    Una guida chiara
 categories: haskell
 ---
 
