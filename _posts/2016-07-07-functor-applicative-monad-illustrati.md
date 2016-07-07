@@ -100,8 +100,9 @@ Specifica come `fmap` si applica ai `Just` e ai `Nothing`.
  ```haskell
  instance Functor Maybe where
     fmap func (Just val) = Just (func val)
-    fmapo func Nothing = Nothing
+    fmap func Nothing = Nothing
 ```
+
 Ecco quello che succede dietro le scene quando scriviamo `fmap (+3) (Just 2)`:
 
 ![fmap_just]({{ site.url }}/images/fmap_just.png)
