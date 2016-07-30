@@ -52,7 +52,7 @@ normale funzione:
 
 ![no_fmap_ouch]({{ site.url }}/images/no_fmap_ouch.png)
 
-Questo &grave; il momento per `fmap` di entrare in azione. `fmap` sa come
+Questo &egrave; il momento per `fmap` di entrare in azione. `fmap` sa come
 applicare funzioni a valori che si trovano all'interno di un contesto. Per esempio,
 immagina di voler applicare `(+3)` a `Just 2`. Usa `fmap`:
 
