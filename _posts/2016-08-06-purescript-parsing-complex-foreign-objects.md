@@ -19,18 +19,18 @@ I was interested in the buckets array only, so at first I tried finding a soluti
 
 I modeled my bucket data type, together with its `IsForeign` instance:
 
-```haskell
+```purescript
 newtype Bucket = Bucket
     { name :: String
     , creationDate :: Either String DateTime
     }
-    
+
 instance bucketIsForeign :: IsForeign Bucket where
     read value = do
         name <- readProp "Name" value
         creationDate <- readProp "CreationDate" value
-        pure $ Bucket { name, readDate creationDate } 
-        
+        pure $ Bucket { name, readDate creationDate }
+
 -- readDate is a function I write to concert js Date objects to ps DateTime objects.
 ```
 

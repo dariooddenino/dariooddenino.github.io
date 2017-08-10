@@ -113,9 +113,9 @@ gems:
 exclude: [vendor]
 
 collections:
-  - recipes:
-      output: true
-      permalink: /ps-cookbook/:name
+  recipes:
+    output: true
+    permalink: /ps-cookbook/:name
 
 
 defaults:

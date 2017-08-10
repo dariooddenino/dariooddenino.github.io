@@ -1,0 +1,14 @@
+{% assign recipes = site.recipes %}
+
+<ul>
+  <h5>Recipes:</h5>
+  {% for recipe in recipes %}
+  <li>
+    <small class="recipe-title">
+            <a href="{{ recipe.url | prepend: site.baseurl }}" class="recipe-link">
+              {{ recipe.title }}
+            </a>
+          </small>
+  </li>
+  {% endfor %}
+</ul>

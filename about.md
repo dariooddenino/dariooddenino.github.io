@@ -5,4 +5,4 @@ permalink: /about/
 tags: about
 ---
 
-Coming soon.
+Hi, my name is Dario and I hope you'll enjoy my little website :)
