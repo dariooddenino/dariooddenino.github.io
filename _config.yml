@@ -111,3 +111,16 @@ gems:
   - jekyll-sitemap
 # https://github.com/jekyll/jekyll/issues/2938
 exclude: [vendor]
+
+collections:
+  - recipes:
+      output: true
+      permalink: /ps-cookbook/:name
+
+
+defaults:
+  - scope:
+      path: ''
+      type: 'recipes'
+    values:
+      layout: 'recipe'
