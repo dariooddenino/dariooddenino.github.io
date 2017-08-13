@@ -79,7 +79,7 @@ foo mbArray = fromMaybe zero
     >>= head
     >>= traceAnyM
 
--- Under each invocation I'm writing the console output when called from psci:
+-- Under each invocation I'm writing the console output when calling `foo` in psci:
 
 foo $ Just [1, 2]
 -- [1, 2] (first traceAnyM)
@@ -96,7 +96,7 @@ foo Nothing
 
 ---
 
-Finally there's `spy`, which logs a value and return it:
+Finally there's `spy`, which logs a value and returns it:
 
 ```haskell
 spy :: forall a. a -> a
