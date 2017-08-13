@@ -102,7 +102,7 @@ Finally there's `spy`, which logs a value and returns it:
 spy :: forall a. a -> a
 ```
 
-This example will log 3 and then assign it to `foo`:
+This example will log `3` and then assign it to `foo`:
 
 ```haskell
 main = do
