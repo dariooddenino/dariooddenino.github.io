@@ -5,7 +5,7 @@ date:       2017-08-18 16:32:11
 categories: reason
 ---
 
-[This repository](https://github.com/dariooddenino/bs-react-router-dom) contains simple bindings for [react-router-dom](https://www.npmjs.com/package/react-router-dom) v4.
+[This repository](https://github.com/dariooddenino/bs-react-router-dom) contains simple bucklescript bindings for [react-router-dom](https://www.npmjs.com/package/react-router-dom) v4.
 
 There are some small differences in usage, mainly depending on how reason-react wants components to be passed as props.
 
