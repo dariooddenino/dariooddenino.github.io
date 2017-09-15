@@ -55,9 +55,15 @@ exports.effectfulFooImpl = function (target, amount) {
 Then we can wrap it like this:
 
 ```haskell
-foreign import effectfulFooImpl :: forall eff. EffFn2 (missiles :: MISSILES | eff) String Int Unit
+foreign import effectfulFooImpl
+  :: forall eff
+   . EffFn2 (missiles :: MISSILES | eff) String Int Unit
 
-effectfulFoo :: forall eff. String -> Int -> Eff (missiles :: MISSILES | eff) Unit
+effectfulFoo
+  :: forall eff
+   . String
+  -> Int
+  -> Eff (missiles :: MISSILES | eff) Unit
 effectfulFoo t a = runEffFn2 effectfulFooImpl t a
 ```
 
@@ -83,9 +89,15 @@ exports.ajaxGetImpl = function (request) {
 And then wrap it like this:
 
 ```haskell
-foreign import ajaxGetImpl :: forall eff. Request -> EffFnAff (ajax :: AJAX | eff) Response
+foreign import ajaxGetImpl
+  :: forall eff
+   . Request
+  -> EffFnAff (ajax :: AJAX | eff) Response
 
-ajaxGet :: forall eff. Request -> Aff (ajax :: AJAX | eff) Response
+ajaxGet
+  :: forall eff
+   . Request
+  -> Aff (ajax :: AJAX | eff) Response
 ajaxGet = fromEffFnAff <<< ajaxGetImpl
 ```
 
