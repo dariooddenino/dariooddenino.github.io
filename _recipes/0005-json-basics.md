@@ -9,10 +9,10 @@ The code is heavily inspired by the library's test code and by [this video](http
 We'll se how to read/write:
 - simple objects with basic types
 - newtype fields
-- reading nested objects
-- handling null/undefined
+- nested objects
+- `null` and `undefined`
 
-We'll use these helper types/functions:
+We'll use these helper types and functions:
 
 ```haskell
 type E a = Either MultipleErrors a
@@ -34,7 +34,7 @@ testFunc t s = case (handleJSON s) of
 ```
 
 `readJSON` and `writeJSON` are provided by `purescript-simple-json`, and are the only functions really we need to work with JSONs (`runExcept` from `purescript-transformers` is useful too!).
-The rest of the code is just to keep DRY.
+The rest of the code is just to keep it DRY.
 
 ## Simple objects with basic types
 
@@ -43,10 +43,11 @@ In this example, we'll be working with this record:
 type SimpleRecord = { a :: Int, b :: String, c :: Boolean, d :: Array String }
 ```
 
-Let's try it out with some test values:
+Let's try it out with some test values. We'll be using our `testFunc` which basically does a roundtrip:
 ```haskell
 simpleRecordSuccess = "{ \"a\": 2, \"b\": \"foo\", \"c\": true, \"d\": [ \"foo\", \"bar\" ]}"
-simpleRecordSuccessToo = "{ \"a\": 2, \"b\": \"foo\", \"c\": true, \"d\": [ \"foo\", \"bar\" ], \"e\": 2.0 }"
+simpleRecordSuccessToo = 
+  "{ \"a\": 2, \"b\": \"foo\", \"c\": true, \"d\": [ \"foo\", \"bar\" ], \"e\": 2.0 }"
 simpleRecordFail = "{ \"a\": 2 }"
 
 testSimpleRecord =
@@ -65,7 +66,7 @@ newtype Foo = Foo String
 type NTRecord = { a :: Foo }
 ```
 
-In this case there's just a little more boilerplate involved, but it's just as easy:
+In this case there's a little more boilerplate involved, but it's just as easy:
 ```haskell
 derive newtype instance rfFoo :: ReadForeign Foo
 derive newtype instance wfFoo :: WriteForeign Foo
@@ -77,9 +78,9 @@ testNt =
     , "{\"a\": 2}"] -- same as above, but with "Number"
 ```
 
-## Reading nested objects
+## Nested objects
 
-What if we want to read a sub object of our JSON? It's just as easy :)
+What if we want to read a sub object of our JSON?
 
 ```haskell
 nestedTest' = do
@@ -91,7 +92,7 @@ nestedTest' = do
         wrappedRec = readJSON $ "{ \"a\":" <> simpleRecordSuccess <> "}"
 ```
 
-## Handling null/undefined
+## null and undefined
 
 The first option is to use `Maybe`:
 
