@@ -55,6 +55,8 @@ exports.effectfulFooImpl = function (target, amount) {
 Then we can wrap it like this:
 
 ```haskell
+foreign import data MISSILES :: Effect
+
 foreign import effectfulFooImpl
   :: forall eff
    . EffFn2 (missiles :: MISSILES | eff) String Int Unit
