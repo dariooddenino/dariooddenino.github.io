@@ -2,7 +2,7 @@
 layout:     post
 title:      Adding static files to Yesod
 date:       2017-10-18 14:14:00
-categories: hasell
+categories: haskell
 ---
 
 In a Yesod app the files in the static folder can be accessed as a variable composed by the folder structure and the name of the file.
