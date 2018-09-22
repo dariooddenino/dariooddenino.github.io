@@ -42,7 +42,7 @@ They go up to 10 arguments and it's very unlikely that more would be needed!
 
 ## Effectful sync functions
 
-There's a similar set of functions to work with effectful functions, and they're are under [Control.Monad.Eff.Uncurried](https://pursuit.purescript.org/packages/purescript-eff/3.1.0/docs/Control.Monad.Eff.Uncurried).
+There's a similar set of functions to work with effectful functions, and they're are under [Effect.Uncurried](https://pursuit.purescript.org/packages/purescript-effect/2.0.0/docs/Effect.Uncurried).
 
 Let's say we have:
 
@@ -55,23 +55,22 @@ exports.effectfulFooImpl = function (target, amount) {
 Then we can wrap it like this:
 
 ```haskell
-foreign import data MISSILES :: Effect
 
 foreign import effectfulFooImpl
   :: forall eff
-   . EffFn2 (missiles :: MISSILES | eff) String Int Unit
+   . EffectFn2 String Int Unit
 
 effectfulFoo
   :: forall eff
    . String
   -> Int
-  -> Eff (missiles :: MISSILES | eff) Unit
-effectfulFoo t a = runEffFn2 effectfulFooImpl t a
+  -> Effect Unit
+effectfulFoo t a = runEffectFn2 effectfulFooImpl t a
 ```
 
 ## Async functions
 
-To work with async functions, I've found that the easiest way is to use `Control.Monad.Aff.Compat` from [purescript-aff](https://pursuit.purescript.org/packages/purescript-aff).
+To work with async functions, I've found that the easiest way is to use `Effect.Aff.Compat` from [purescript-aff](https://pursuit.purescript.org/packages/purescript-aff).
 
 ```javascript
 // let's suppose get makes an ajax request.
@@ -94,13 +93,13 @@ And then wrap it like this:
 foreign import ajaxGetImpl
   :: forall eff
    . Request
-  -> EffFnAff (ajax :: AJAX | eff) Response
+  -> EffectFnAff Response
 
 ajaxGet
   :: forall eff
    . Request
-  -> Aff (ajax :: AJAX | eff) Response
-ajaxGet = fromEffFnAff <<< ajaxGetImpl
+  -> Aff Response
+ajaxGet = fromEffectFnAff <<< ajaxGetImpl
 ```
 
 It would be better to return a canceler, but you can find an example on `purescript-aff`'s documentation page.
