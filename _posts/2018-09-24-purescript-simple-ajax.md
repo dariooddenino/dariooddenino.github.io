@@ -23,7 +23,7 @@ get :: forall b. ReadForeign b => URL -> Aff (Either AjaxError b)
 delete :: forall b. ReadForeign b => URL -> Aff (Either AjaxError b) 
 delete_ :: URL -> Aff (Either AjaxError Unit)
 post :: forall a b. WriteForeign a => ReadForeign b => URL -> Maybe a -> Aff (Either AjaxError b)
-post_ :: forall a. WriteForeign a => URL -> Maybe a -> Aff (Either HTTPError Unit)`
+post_ :: forall a. WriteForeign a => URL -> Maybe a -> Aff (Either HTTPError Unit)
 ```
 
 `put`, `put_`, `patch` and `patch_` have the same signature as `post` and `post_`.
