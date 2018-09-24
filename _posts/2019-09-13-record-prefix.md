@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Automatically adding a prefix to a record's labels in Purescript
+title:      Automatically adding a prefix to a record labels in Purescript
 date:       2018-09-13 12:14:00
 categories: purescript
 ---
