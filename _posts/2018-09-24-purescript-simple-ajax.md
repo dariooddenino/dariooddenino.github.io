@@ -77,15 +77,15 @@ are put together in a `Variant`, and there are two type alias that can be used:
 
 Using `Variant` tools we have a lot of power on how to deal with these errors.
 
-We can ignore the underlying type, and just handle the generic error case:
+- We can ignore the underlying type, and just handle the generic error case:
 
 ```haskell
 case res of
   Left _ -> log "ERROR!"
 ```
 
-We can handle a default case and do something specific for the errors we are
-interedted in:
+- We can handle a default case and do something specific for the errors we are
+interested in:
 
 ```haskell
 case res of
@@ -96,7 +96,7 @@ case res of
       log mess
 ```
 
-Or we can be sure that all errors case are handled in a specific way:
+- Or we can be sure that all errors case are handled in a specific way:
 
 ```haskell
 case res of
@@ -134,4 +134,6 @@ If the compiler complains that our data types don't implement `ReadForeign` or
   Either MultipleErrors Foo`.
   I prefer the second approach, as generally I only need to read/write once, and
   I don't want to have to deal with wrapping and unwrapping a newtype all the time.
+  
+You can find more about this reading `simple-json` documentation.
    
