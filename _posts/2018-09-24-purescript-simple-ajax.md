@@ -18,12 +18,13 @@ library, decoding and encoding JSON takes zero effort in a lot of cases.
 
 The basic methods that simple-ajax exposes are:
 
-- `get :: forall b. ReadForeign b => URL -> Aff (Either AjaxError b)`
-- `delete :: forall b. ReadForeign b => URL -> Aff (Either AjaxError b)` 
-- `delete_ :: URL -> Aff (Either AjaxError Unit)` 
-- `post :: forall a b. WriteForeign a => ReadForeign b => URL -> Maybe a -> Aff
-  (Either AjaxError b)`
-- `post_ :: forall a. WriteForeign a => URL -> Maybe a -> Aff (Either HTTPError Unit)`
+```haskell
+get :: forall b. ReadForeign b => URL -> Aff (Either AjaxError b)
+delete :: forall b. ReadForeign b => URL -> Aff (Either AjaxError b) 
+delete_ :: URL -> Aff (Either AjaxError Unit)
+post :: forall a b. WriteForeign a => ReadForeign b => URL -> Maybe a -> Aff (Either AjaxError b)
+post_ :: forall a. WriteForeign a => URL -> Maybe a -> Aff (Either HTTPError Unit)`
+```
 
 `put`, `put_`, `patch` and `patch_` have the same signature as `post` and `post_`.
 
@@ -53,7 +54,7 @@ The methods are `getR`, `deleteR`, `deleteR_`, `postR`, `postR_`, `putR`,
 `putR_`, `patchR`, `patchR_`.
 
 The methods accept a subset of 
-```
+```haskell
 type SimpleRequest = { headers         :: Array RequestHeader
                      , username        :: Maybe String
                      , password        :: Maybe String
@@ -65,7 +66,9 @@ type SimpleRequest = { headers         :: Array RequestHeader
 What this means is that if we need to pass the whole record, but just the field
 we need to change from the basic request. E.g.
 
-`getR { withCredentials: true } "http://www.foo.bar"`
+```haskell
+getR { withCredentials: true } "http://www.foo.bar"
+```
 
 ## Errors
 
@@ -121,7 +124,9 @@ with the eventual payload they carry.
 
 To enable retries, we can just pass a request with the `retryPolicy` field. E.g.
 
-`getR { retryPolicy: defaultRetryPolicy } "http://foo.bar"`
+```haskell
+getR { retryPolicy: defaultRetryPolicy } "http://foo.bar"
+```
 
 ## Custom instances
 
