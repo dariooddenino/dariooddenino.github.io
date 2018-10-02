@@ -12,13 +12,13 @@ Purescript coder (like me!).
 For example, in most templating languages it's possibile to write something like
 this (here I'm using handlebars):
 
-```handlebars
+```
 {{#if user_name}}
 Hello #{user_name}!
 {{/if}}
 ```
 
-Obviously we want to avoid something hideous like:
+Obviously with Halogen we want to avoid something hideous like:
 
 ```haskell
 HH.div_
