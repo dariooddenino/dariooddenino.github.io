@@ -105,14 +105,14 @@ case res of
 case res of
     Left e ->
       let mess = onMatch
-        { _badRequest: \s -> "Bad request: "  <> s
-        , _unAuthorized: \_ -> "Unauthorized"
-        , _forbidden: \_ -> "Nope"
-        , _notFound: \_ -> "Hello"
-        , _methodNotAllowed: \_ -> "!"
-        , _formatError: \err -> "Error: " <> renderForeignError err
-        , _serverError: \err -> "Server error: " <> err
-        , _parseError: \ers -> intercalate ", " $ map renderForeignError ers
+        { badRequest: \s -> "Bad request: "  <> s
+        , unAuthorized: \_ -> "Unauthorized"
+        , forbidden: \_ -> "Nope"
+        , notFound: \_ -> "Hello"
+        , methodNotAllowed: \_ -> "!"
+        , formatError: \err -> "Error: " <> renderForeignError err
+        , serverError: \err -> "Server error: " <> err
+        , parseError: \ers -> intercalate ", " $ map renderForeignError ers
         } e
       log mess
 ```
