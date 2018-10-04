@@ -2,11 +2,10 @@
 layout:     post
 title:      A quick overview of Purescript package managers as of October 2018
 date:       2018-10-04 20:14:00
-published:  false
 categories: purescript
 ---
 
-In this post I want to give a veru quick overview of Purescript's package managers and some tools related to them.
+In this post I want to give a very quick overview of Purescript's package managers and some tools related to them.
 
 I'll go through:
 
@@ -29,13 +28,12 @@ bower i --save purescript-simple-json
 bower i --save-dev purescript-quickcheck
 ```
 
-Sadly, Bower is not the perfect tool to use with Purescript, and I think I realized this mainly during the switch 
+Sadly, Bower is not the perfect tool to use with Purescript, and I realized this mainly during the switch 
 from Purescript v0.11 to v0.12.
 Figuring out the correct packages versions that have to go with the compiler version currently in use can get annoying 
 and a source of many mistakes.
 
-
-Luckily, the problem was already solved by psc-package!
+Luckily, I found out that this problem was already solved by psc-package!
 
 It's important to note that currenly using bower for dependencies is the only way to publish a package on [Pursuit](https://pursuit.purescript.org/).
 
@@ -66,7 +64,8 @@ Two of the problems of extending psc-package's package sets are having to deal w
 and some messy and not very useful git diffs.
 
 Spachetti is an alternate psc-package package set, but with super powers. The JSON is generated using Dhall, and there
-are a few scripts to automate some tasks, e.g. one is used to add a package automatically from bower.
+are a few scripts to automate some tasks, e.g. one is used to add a package from bower, by generating automatically the
+correct JSON object with all the dependencies.
 
 The workflow to add packages is essentially the same as with psc-package: fork spacchetti's repo, make the changes you need,
 add a tag, and then use it in your project.
@@ -83,8 +82,7 @@ Right now it only has two commands: `local-setup` and `insdhall` (ugh).
 With these it becomes very easy to add additional packages to a spacchetti set without having to go through all the procedure of
 forking, modifying etc.
 
-We can just define the basic set and the eventual changes or additions we want and spacchetti-cli will thing about everything else
-(well, almost).
+We can just define the base set and the eventual changes or additions we want, and spacchetti-cli will think about everything else (well, almost).
 
 You can read more about it [here](https://spacchetti.readthedocs.io/en/latest/local-setup.html).
 
