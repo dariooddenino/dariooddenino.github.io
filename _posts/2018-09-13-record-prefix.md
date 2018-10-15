@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Automatically adding a prefix to a record labels in Purescript
+title:      Automatically adding (or removing) a prefix to a record labels in Purescript
 date:       2018-09-13 12:14:00
 categories: purescript
 ---
@@ -69,16 +69,16 @@ The last thing is the actual function that we are going to use. It calls `hfoldl
 we just wrote, and then uses `Record.builder` to create the actual record.
 
 ```purescript
-addPrefix ::
+add ::
   forall rin rout pre.
   HFoldlWithIndex (PrefixProps pre) (Builder {} {}) { | rin } (Builder {} { | rout }) =>
   SProxy pre ->
   { | rin } ->
   { | rout }
-addPrefix pre = flip Builder.build {} <<< hfoldlWithIndex (PrefixProps pre) identity
+add pre = flip Builder.build {} <<< hfoldlWithIndex (PrefixProps pre) identity
 ```
 
-Done! Here's how it can be used:
+Done! `remove` is basically the same, and here's how they can be used:
 
 ```purescript
 foo :: { bar :: Int, baz :: Boolean }
@@ -86,7 +86,10 @@ foo = { bar: 1, baz: true }
 
 
 bar :: { prebar :: Int, prebaz :: Boolean }
-bar = addPrefix (SProxy :: SProxy "pre") foo
+bar = add (SProxy :: SProxy "pre") foo
+
+baz :: { bar :: Int, baz :: Boolean }
+baz = remove (SProxy :: SProxy "pre") bar
 ```
 
 You can find the code [here](https://github.com/dariooddenino/purescript-record-prefix).
