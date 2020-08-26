@@ -4,7 +4,7 @@ email:       branch13@gmail.com
 author:      Dario Oddenino
 description: "Struggling to be a better coder :)"
 baseurl:     ""
-url:         "http://codingstruggles.com"
+url:         "https://codingstruggles.com"
 date_format: "%b %-d, %Y"
 
 # Google services
