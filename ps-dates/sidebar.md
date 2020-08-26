@@ -2,7 +2,7 @@
 
   - [Types and constructors](datetypes.md)
   
-  - [Operations (TODO)](dateops.md)
+  - [Operations (WIP)](dateops.md)
 
 - Time
 
@@ -12,7 +12,7 @@
 
 - Date and Time
 
-  - [Types and constructors (TODO)](datetimetypes.md)
+  - [Types and constructors](datetimetypes.md)
   
   - [Operations (TODO)](datetimeops.md)
 
