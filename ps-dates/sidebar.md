@@ -2,25 +2,24 @@
 
   - [Types and constructors](datetypes.md)
   
-  - Operations
+  - [Operations (TODO)](dateops.md)
 
 - Time
 
   - [Types and constructors](timetypes.md)
   
-  - Operations
+  - [Operations (TODO)](timeops.md)
 
 - Date and Time
 
-  - Types
+  - [Types and constructors (TODO)](datetimetypes.md)
   
-  - Operations
+  - [Operations (TODO)](datetimeops.md)
 
 - Durations and Intervals
 
-  - Types
+  - [Types (TODO)](ditypes.md)
   
-  - Operations
+  - [Operations (TODO)](diops.md)
 
-- Ideas
-
+- Parsing and Formatting
