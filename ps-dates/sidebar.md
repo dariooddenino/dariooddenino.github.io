@@ -16,10 +16,14 @@
   
   - [Operations (TODO)](datetimeops.md)
 
-- Durations and Intervals
+- Durations
 
-  - [Types (TODO)](ditypes.md)
+  - [Types](ditypes.md)
   
-  - [Operations (TODO)](diops.md)
+  - [Operations](diops.md)
+  
+- Intervals
 
 - Parsing and Formatting
+
+- Testing
