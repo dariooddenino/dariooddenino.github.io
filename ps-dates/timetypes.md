@@ -53,7 +53,7 @@ myHour = toEnum 22 -- ^ Values go from 0 to 23
 The `Minute` constructor is not exported, so we have to use [toEnum](https://pursuit.purescript.org/packages/purescript-enums/4.0.1/docs/Data.Enum#v:toEnum) to build it.
 
 ```haskell
-myMinutes :: Maybe Hour
+myMinutes :: Maybe Minute
 myMinutes = toEnum 22 -- ^ Values go from 0 to 59
 ```
 
@@ -64,7 +64,7 @@ myMinutes = toEnum 22 -- ^ Values go from 0 to 59
 The `Second` constructor is not exported, so we have to use [toEnum](https://pursuit.purescript.org/packages/purescript-enums/4.0.1/docs/Data.Enum#v:toEnum) to build it.
 
 ```haskell
-mySeconds :: Maybe Hour
+mySeconds :: Maybe Second
 mySeconds = toEnum 22 -- ^ Values go from 0 to 59
 ```
 
@@ -76,6 +76,6 @@ mySeconds = toEnum 22 -- ^ Values go from 0 to 59
 The `Millisecond` constructor is not exported, so we have to use [toEnum](https://pursuit.purescript.org/packages/purescript-enums/4.0.1/docs/Data.Enum#v:toEnum) to build it.
 
 ```haskell
-myMilliseconds :: Maybe Hour
+myMilliseconds :: Maybe Millisecond
 myMilliseconds = toEnum 300 -- ^ Values go from 0 to 999
 ```
