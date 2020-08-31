@@ -23,6 +23,10 @@
   - [Operations](diops.md)
   
 - Intervals
+ 
+  - [Types (WIP)](itypes.md)
+  
+  - [Operations (TODO)](iops.md)
 
 - Parsing and Formatting
 
