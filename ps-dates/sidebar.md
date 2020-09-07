@@ -2,7 +2,7 @@
 
   - [Types and constructors](datetypes.md)
   
-  - [Operations (WIP)](dateops.md)
+  - [Operations](dateops.md)
 
 - Time
 
