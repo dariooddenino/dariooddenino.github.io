@@ -8,7 +8,7 @@
 
   - [Types and constructors](timetypes.md)
   
-  - [Operations (TODO)](timeops.md)
+  - [Operations](timeops.md)
 
 - Date and Time
 
