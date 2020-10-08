@@ -27,8 +27,8 @@ testFunc
   => WriteForeign a 
   => Proxy a 
   -> String 
-  -> Eff (console :: CONSOLE | eff) Unit
-testFunc t s = case (handleJSON s) of
+  -> Effect  Unit
+testFunc _ s = case (handleJSON s) of
   Left err -> logShow err
   Right (r :: a) -> log $ writeJSON r
 ```
