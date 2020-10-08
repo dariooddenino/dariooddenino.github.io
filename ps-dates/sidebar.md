@@ -14,7 +14,7 @@
 
   - [Types and constructors](datetimetypes.md)
   
-  - [Operations (TODO)](datetimeops.md)
+  - [Operations](datetimeops.md)
 
 - Durations
 

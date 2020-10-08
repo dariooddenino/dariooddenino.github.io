@@ -26,7 +26,7 @@ let myHour = hour myTime
 
 ## Adjusting a Time value
 
-It's possible to alter a `Time` value directly by using 
+It's possible to alter a [Time](/timetypes/#time) value directly by using 
 [setHour](https://pursuit.purescript.org/packages/purescript-datetime/4.1.1/docs/Data.Time#v:setHour), 
 [setMinute](https://pursuit.purescript.org/packages/purescript-datetime/4.1.1/docs/Data.Time#v:setMinute), 
 [setSecond](https://pursuit.purescript.org/packages/purescript-datetime/4.1.1/docs/Data.Time#v:setSecond) and 
