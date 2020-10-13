@@ -2,7 +2,7 @@
 
 ## Extracting elements out of a Date
 
-Extract a [Year](/datetypes#year), [Month](/datetypes#month) or a [Day](#datetypes.md/day) out
+Extracting a [Year](/datetypes#year), [Month](/datetypes#month) or a [Day](#datetypes.md/day) out
 of a [Date](/datetypes.md#date) is simple.
 
 We can deconstruct via pattern matching:

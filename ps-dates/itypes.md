@@ -2,14 +2,14 @@
 
 This seems to be used mainly with formatters. Come back later after some tests.
 
-## Intervals
+## Interval
 
 ## RecurringInterval
 
 ## Duration
 
 [Data.Interval.Duration](https://pursuit.purescript.org/packages/purescript-datetime/4.1.1/docs/Data.Interval.Duration#t:Duration)
-shouldn't be confused with [Data.Time.Duration](/ditypes#duration-type-class).
+shouldn't be confused with the [Data.Time.Duration](/ditypes#duration-type-class) type class.
 
 This `Duration` is a map from [DurationComponent](#durationcomponent) to the respective amount.
 ```haskell
