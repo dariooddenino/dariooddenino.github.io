@@ -6,9 +6,7 @@ categories: haskell
 ---
 
 By default Yesod does live reloading when editing `.hs` files or
-Shakespeare template files (`.hamlet`, `.cassius`, `.lucius`).
-
-When working directly with js or css files this doesn't happen
+Shakespeare template files. When working directly with js or css files this doesn't happen
 and we're forced to manually reload the browser at every change.
 
 This is a simple setup to improve this behaviour.
@@ -55,10 +53,11 @@ import Network.Wai.Middleware.Cors
 ```haskell
 corsWare :: Middleware
 corsWare = let
-    appCorsResourcePolicy = simpleCorsResourcePolicy { corsMethods = ["OPTIONS", "GET", "POST", "PUT", "DELETE"]
-                                                         , corsOrigins = Just (["http://localhost:4000"], True)
-                                                         , corsRequestHeaders = ["Authorization", "Content-Type", "x-requested-with", "x-xsrf-token"]
-                                                         }
+    appCorsResourcePolicy = 
+      simpleCorsResourcePolicy { corsMethods = ["OPTIONS", "GET", "POST", "PUT", "DELETE"]
+                               , corsOrigins = Just (["http://localhost:4000"], True)
+                               , corsRequestHeaders = ["Authorization", "Content-Type", "x-requested-with", "x-xsrf-token"]
+                               }
     in cors (const $ Just appCorsResourcePolicy)
 ```
 
