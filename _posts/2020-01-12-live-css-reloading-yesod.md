@@ -55,7 +55,7 @@ corsWare :: Middleware
 corsWare = let
     appCorsResourcePolicy = 
       simpleCorsResourcePolicy { corsMethods = ["OPTIONS", "GET", "POST", "PUT", "DELETE"]
-                               , corsOrigins = Just (["http://localhost:4000"], True)
+                               , corsOrigins = Just (["http://localhost:3000", "http://localhost:4000"], True)
                                , corsRequestHeaders = ["Authorization", "Content-Type", "x-requested-with", "x-xsrf-token"]
                                }
     in cors (const $ Just appCorsResourcePolicy)
