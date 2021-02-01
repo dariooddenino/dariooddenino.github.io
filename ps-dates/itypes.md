@@ -40,3 +40,7 @@ data DurationComponent = Second | Minute | Hour | Day | Week | Month | Year
 
 
 ## IsoDuration
+
+[Data.Interval.Duration.Iso](https://pursuit.purescript.org/packages/purescript-datetime/4.1.1/docs/Data.Interval.Duration.Iso#t:IsoDuration)
+
+TODO

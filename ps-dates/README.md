@@ -6,3 +6,5 @@ At the time of writing these were the libraries versions:
 
 `purescript-datetime@4.1.1`
 
+[Go back to the blog](https://codingstruggle.com)
+
