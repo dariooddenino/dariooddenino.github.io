@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Adding a newline after a comment block in Doom Emacs
-date:       2021-03-03 11:14:00
+date:       2021-03-03 10:14:00
 categories: emacs
 ---
 
