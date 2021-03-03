@@ -55,6 +55,7 @@ Using `g o` I can add an empty line below the comment block:
  
  |
  V
+
 /**
  *
  */
