@@ -17,7 +17,7 @@ After a bit of trials I finally found the correct way to configure it on Doom Em
 Add this line to `packages.el` to install company-tabnine:
 
 ```lisp
-(package! company-tabnine :recipe (:host github :repo "/TommyX12/company-tabnine"))
+(package! company-tabnine :recipe (:host github :repo "TommyX12/company-tabnine"))
 ```
 
 Then add to `config.el`:
